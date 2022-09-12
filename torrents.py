@@ -14,12 +14,11 @@ try:
 
     input_args= stock_input_add.replace(" ", "+")
     url1= (f"https://thepiratebay.org/search.php?q={input_args}")
-    url2= (f'https://rarbg.to/torrents.php?search={input_args}')
-
-    print(f"{url1}\n{url2}\n")
-
+    print(f"{url1}")
     webbrowser.open_new(url1)
     time.sleep(2)
+    url2= (f'https://rarbg.to/torrents.php?search={input_args}&order=size&by=ASC')
+    print(f"\n{url2}")
     webbrowser.open_new(url2)
     time.sleep(2)
     print('\ndone')
